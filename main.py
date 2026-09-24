@@ -2,6 +2,7 @@ from tkinter import *
 import tkinter as tk
 import ttkbootstrap as ttk
 import time
+from pathlib import Path
 
 
 
@@ -29,7 +30,12 @@ def Start():
 fen = ttk.Window(themename="darkly")
 fen.title("KKB - GestCom")
 fen.geometry("1200x650")
-fen.iconbitmap('C:/Users/_Maes/Desktop/GestCom/src/images/logo_kkbgestcom (1).ico')
+icon_path = Path(__file__).resolve().parent / 'src' / 'images' / 'logo_kkbgestcom (1).ico'
+if icon_path.is_file():
+    try:
+        fen.iconbitmap(str(icon_path))
+    except tk.TclError:
+        pass
 # frame
 main_frame = ttk.LabelFrame(fen, width=100, height=50, borderwidth=50, relief=tk.GROOVE ,text="menu")
 main_frame.pack(side=LEFT,padx=10)
