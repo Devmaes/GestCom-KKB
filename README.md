@@ -10,7 +10,7 @@ Ce dépôt contient une interface de bureau Python/Tkinter pour un projet de ges
 
 ## État et exécution
 
-Il s'agit d'un snapshot d'interface, pas d'une distribution installable de l'application complète. Le lancement requiert Python, Tkinter et `ttkbootstrap`. Avant exécution sur une autre machine, remplacer le chemin absolu Windows de l'icône dans `main.py` par un chemin relatif valide.
+Il s'agit d'un snapshot d'interface, pas d'une distribution installable de l'application complète. Le lancement requiert Python, Tkinter et `ttkbootstrap`. L'icône est maintenant chargée depuis `src/images/` avec un chemin relatif au dépôt ; son absence ou une plateforme incompatible n'empêche pas l'ouverture de la fenêtre.
 
 ```sh
 python -m pip install ttkbootstrap
